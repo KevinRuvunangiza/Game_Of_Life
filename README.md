@@ -36,6 +36,8 @@ Because this project has absolutely no dependencies, running it is incredibly si
 2. Open the `index.html` file directly in any modern web browser.
 3. Watch the ecosystem evolve!
 
+## Live Demo
+[Live Demo](https://kevinruvunangiza.github.io/Game_Of_Life/)
 ## 👨‍💻 Author
 
 **Kevin Ruvunangiza**
