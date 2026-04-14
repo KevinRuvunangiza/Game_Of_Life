@@ -1,3 +1,4 @@
+
 let res = 20; // Size of cells
 let cols; // Size of columns
 let rows; // Size of rows
