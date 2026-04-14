@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Conway's Game of Life - An interactive cellular automaton">
+        <link rel="stylesheet" href="./style.css">
+        <title>Conway's Game of Life</title>
+    </head>
+    <body>
+        <main class="app-container">
+            <div class="content-wrapper">
+                <header class="header">
+                    <h1>Conway's Game of Life</h1>
+                    <p class="subtitle">Watch patterns emerge from simple
+                        rules</p>
+                </header>
+
+                <div class="controls-panel">
+                    <div class="control-group">
+                        <label for="speed-slider">Speed</label>
+                        <div class="slider-container">
+                            <input type="range" id="speed-slider" min="1"
+                                max="100" value="30" class="slider">
+                            <span id="speed-value"
+                                class="value-display">30</span>
+                        </div>
+                    </div>
+
+                    <div class="control-group">
+                        <label for="grid-slider">Grid Size</label>
+                        <div class="slider-container">
+                            <input type="range" id="grid-slider" min="5"
+                                max="50" value="20" class="slider">
+                            <span id="grid-value"
+                                class="value-display">20</span>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="play-btn"
+                            class="btn btn-primary">Play</button>
+                        <button id="pause-btn"
+                            class="btn btn-secondary">Pause</button>
+                        <button id="reset-btn"
+                            class="btn btn-secondary">Reset</button>
+                        <button id="clear-btn"
+                            class="btn btn-secondary">Clear</button>
+                    </div>
+                </div>
+
+                <div class="canvas-container">
+                    <canvas id="main"></canvas>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>Made by <span class="creator">You</span></p>
+            </footer>
+        </main>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
