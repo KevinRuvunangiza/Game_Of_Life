@@ -188,8 +188,13 @@ function clearGrid() {
 
 function handleCanvasClick(event) {
   const rect = canvas.getBoundingClientRect();
-  const x = event.clientX - rect.left;
-  const y = event.clientY - rect.top;
+  
+  // Handle both mouse and touch events
+  const clientX = event.clientX !== undefined ? event.clientX : event.touches[0].clientX;
+  const clientY = event.clientY !== undefined ? event.clientY : event.touches[0].clientY;
+  
+  const x = clientX - rect.left;
+  const y = clientY - rect.top;
 
   const col = Math.floor(x / res);
   const row = Math.floor(y / res);
@@ -209,6 +214,10 @@ clearBtn.addEventListener("click", clearGrid);
 speedSlider.addEventListener("input", updateSpeed);
 gridSlider.addEventListener("input", updateGridSize);
 canvas.addEventListener("click", handleCanvasClick);
+canvas.addEventListener("touchstart", (event) => {
+  event.preventDefault();
+  handleCanvasClick(event);
+});
 
 // Initialize
 setupCanvas();
